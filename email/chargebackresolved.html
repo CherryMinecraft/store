@@ -1,0 +1,23 @@
+{% extends "email/layout.html" %}
+
+{% block content %}
+	<p>
+		Hello <b>{{ username }}</b>,
+	</p>
+	<p>
+		We are pleased to inform you that the chargeback against payment {{ txnId }} has now been resolved.
+	</p>
+	{% if actions|length > 0 %}
+	    <p>The following actions have been completed:</p>
+	    
+	    <ul>
+	        {% for action in actions %}
+	            <li>{{ action }}</li>
+	        {% endfor %}
+	    </ul>
+	{% endif %}
+
+	{% if accountData.email_note %}
+		<p>{{ accountData.email_note|raw }}</p>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "email/layout.html" %}
+
+{% block content %}
+   <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="content-block">
+                <h1>Renewal of your {{ accountData.name }} subscription</h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="content-block">
+                <p>This is a quick email to confirm the renewal of your subscription with {{ accountData.name }}</p>
+                <strong>Transaction ID:</strong> {{ details.txn_id }}<br>
+                <strong>Amount:</strong> {{ details.currency }}{{ details.amount }}<br />
+                <p>If you want to end this subscription, please contact us, or <a href="{{ billingAgreement.cancel_url }}">click here</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="content-block">
+                <p>If you have any queries regarding this payment please contact us ({{ accountData.name }}) directly.<br>
+                    Do not contact Tebex. We are not affiliated with the publishers of the games which we support on the Tebex platform.</p>
+                {% if billingAgreement.gateway_id == 21 %}
+                    <p>If you have questions regarding the payment processor, please contact <a href="https://xsolla.com/gamer-support" target="_blank">Xsolla support</a>, 
+                    quoting your transaction ID as your 'Xsolla External Reference ID'.</p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+

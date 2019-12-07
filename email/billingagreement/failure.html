@@ -1,0 +1,35 @@
+{% extends "email/layout.html" %}
+
+{% block content %}
+   <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="content-block">
+                <h1>We were unable to process the renewal of your {{ accountData.name }} subscription</h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="content-block">
+                <p>This is a quick email to let you know we were unable to process the renewal of your subscription with {{ accountData.name }}</p>
+                <strong>Amount:</strong> {{ billingAgreement.next_billing_amount }}<br />
+                {% if billingAgreement.failed_count < 3 %}
+                    <p>We will try to process this transaction again in 24 hours. If we are still unable to take your payment then the subscription may be terminated.</p>
+                {% else %}
+                    <p>We have tried to process this transaction {{ billingAgreement.failed_count }} times. As we have been unable to take your payment this subscription has now been cancelled.</p>
+                {% endif %}
+                <p>If you want to end this subscription, please contact us, or <a href="{{ billingAgreement.cancel_url }}">click here</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="content-block">
+                <p>If you have any queries regarding this payment please contact us ({{ accountData.name }}) directly.<br>
+                    Do not contact Tebex. We are not affiliated with the publishers of the games which we support on the Tebex platform.</p>
+                {% if billingAgreement.gateway_id == 21 %}
+                    <p>If you have questions regarding the payment processor, please contact <a href="https://xsolla.com/gamer-support" target="_blank">Xsolla support</a></p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+

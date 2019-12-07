@@ -1,0 +1,12 @@
+{% extends "email/layout.html" %}
+
+{% block content %}
+	<p>
+		Hello There,
+	</p>
+	<p>
+	    Thanks for purchasing our downloadable package, the link to download the content is below.
+	</p>
+	<a href="{{ link }}">{{ link }}</a>	
+	<p>The package you purchased is {{ package.name }}</p>
+{% endblock %}

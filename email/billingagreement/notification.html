@@ -1,0 +1,32 @@
+{% extends "email/layout.html" %}
+
+{% block content %}
+   <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="content-block">
+                <h1>Confirmation of your {{ accountData.name }} billing agreement</h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="content-block">
+                <p>This is a quick email to confirm that you have successfully set up a billing agreement for your subscription with {{ accountData.name }}</p>
+                <strong>Payment Method:</strong> {{ billingAgreement.gateway_name }}<br>
+                <strong>Next Billing Date:</strong> {{ nextBillingDate }}<br />
+                <strong>Next Billing Amount:</strong> {{ billingAgreement.currency }}{{ nextBillingAmount|number_format(2, '.', ',') }}<br />
+                <p>If you want to end this subscription, please contact us, or <a href="{{ billingAgreement.cancel_url }}">click here</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="content-block">
+                <p>If you have any queries regarding this payment please contact us ({{ accountData.name }}) directly.<br>
+                    Do not contact Tebex. We are not affiliated with the publishers of the games which we support on the Tebex platform.</p>
+                {% if billingAgreement.gateway_id == 21 %}
+                    <p>If you have questions regarding the payment processor, please contact <a href="https://xsolla.com/gamer-support" target="_blank">Xsolla support</a>.</p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+
