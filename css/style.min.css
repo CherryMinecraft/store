@@ -2129,7 +2129,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
   color: #ffffff;
   background-color: #d9534f;
-  border-color: #2e72ea;
+  border-color: #d1332e;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2161,7 +2161,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #d9534f;
-  border-color: #2e72ea;
+  border-color: #d1332e;
 }
 .btn-primary .badge {
   color: #d9534f;
