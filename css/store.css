@@ -77,7 +77,7 @@ body {
   color: #d9534f;
 }
 .text-primary:hover {
-  color: #1863e6;
+  color: #a72925;
 }
 a {
   color: #d9534f;
@@ -200,7 +200,7 @@ a.list-group-item.active:focus .list-group-item-text {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #1863e6;
+  background-color: #a72925;
   border-color: #1455c6;
 }
 .btn-primary:active,
@@ -295,7 +295,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #1863e6;
+  background-color: #a72925;
 }
 .progress-bar {
   background-color: #d9534f;
