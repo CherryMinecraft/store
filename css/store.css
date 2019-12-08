@@ -10,7 +10,7 @@ body {
 .navbar-default {
   background-color: #d9534f;
   border-color: #d9534f;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .navbar-default .navbar-nav > li > a {
   color: #fff;
@@ -45,7 +45,7 @@ body {
 }
 .panel .panel-heading {
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   background-color: #d9534f;
   border: 0;
 }
