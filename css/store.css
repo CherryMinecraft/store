@@ -1,11 +1,15 @@
 body {
   color: #333;
-  background: #fff;
+	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(20, 26, 35, 0.55)),
+				url("https://cdn.jsdelivr.net/gh/CherryMinecraft/store@master/img/bg/light.png") no-repeat center center fixed;
+	background-size: cover;
 }
 @media (prefers-color-scheme: dark) {
 body {
   color: #333;
-  background: #000;
+	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(20, 26, 35, 0.55)),
+				url("https://cdn.jsdelivr.net/gh/CherryMinecraft/store@master/img/bg/dark.png") no-repeat center center fixed;
+	background-size: cover;
 }
 }
 .modal-header,
