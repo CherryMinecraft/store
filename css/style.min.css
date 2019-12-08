@@ -527,7 +527,7 @@ mark,
   color: #d9534f;
 }
 a.text-primary:hover {
-  color: #1863e6;
+  color: #a72925;
 }
 .text-success {
   color: #3c763d;
@@ -558,7 +558,7 @@ a.text-danger:hover {
   background-color: #d9534f;
 }
 a.bg-primary:hover {
-  background-color: #1863e6;
+  background-color: #a72925;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -2137,7 +2137,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #1863e6;
+  background-color: #a72925;
   border-color: #1455c6;
 }
 .btn-primary:active,
@@ -3784,7 +3784,7 @@ a.label:focus {
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #1863e6;
+  background-color: #a72925;
 }
 .label-success {
   background-color: #3fad46;
