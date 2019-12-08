@@ -2,6 +2,12 @@ body {
   color: #333;
   background: #fff;
 }
+@media (prefers-color-scheme: dark) {
+body {
+  color: #333;
+  background: #000;
+}
+}
 .modal-header,
 .modal-body,
 .modal-footer {
